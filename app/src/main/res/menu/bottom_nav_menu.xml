@@ -1,0 +1,10 @@
+<!-- bottom_nav_menu.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/homeFragment" android:icon="@drawable/baseline_home_24" android:title="@string/home" />
+    <item android:id="@+id/docsFragment" android:icon="@drawable/outline_article_24" android:title="@string/docs"/>
+    <item android:id="@+id/todoFragment" android:icon="@drawable/outline_add_notes_24" android:title="@string/todo"/>
+    <item android:id="@+id/exploreFragment" android:icon="@drawable/baseline_add_location_24" android:title="@string/explore"/>
+    <item android:id="@+id/chatFragment" android:icon="@drawable/baseline_document_scanner_24" android:title="@string/forum"/>
+
+</menu>
