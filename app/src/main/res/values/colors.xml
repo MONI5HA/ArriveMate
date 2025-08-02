@@ -3,4 +3,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="app_color">#FFEE00</color>
+    <color name="red_500">#CB4A4A</color>
+    <color name="button_pressed_color">#D32F2F</color>
+    <color name="button_disabled_color">#BDBDBD</color>
+    <color name="button_default_color">#C54646</color>
+
 </resources>
