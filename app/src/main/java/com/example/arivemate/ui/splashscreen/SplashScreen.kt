@@ -14,6 +14,7 @@ import androidx.lifecycle.lifecycleScope
 import com.example.arivemate.MainActivity
 import com.example.arivemate.R
 import com.example.arivemate.databinding.ActivitySplashScreenBinding
+import com.example.arivemate.ui.auth.LoginActivity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -41,7 +42,7 @@ class SplashScreen : AppCompatActivity() {
             animate().alpha(1f).setDuration(500).start()
         }
         binding.SplashButton.setOnClickListener {
-            startActivity(Intent(this,MainActivity::class.java));
+            startActivity(Intent(this,LoginActivity::class.java));
         }
 
 
