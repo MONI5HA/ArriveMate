@@ -17,11 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
-
-            <!-- Header -->
-
-            <!-- Title -->
+            android:padding="5dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -31,20 +27,31 @@
                 android:orientation="vertical"
                 android:padding="8dp">
 
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="end"
-                    android:src="@drawable/baseline_add_location_24" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFEB3B"
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
 
-                <TextView
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="38dp"
+                        android:layout_gravity="end"
+                        android:src="@drawable/baseline_add_location_24" />
+
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/countryCodePicker"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
-                    android:layout_marginStart="4dp"
-                    android:fontFamily="@font/akshar_medium"
-                    android:text="canada"
-                    android:textStyle="bold" />
+                    app:ccp_showFlag="false"
+                    app:ccp_showFullName="true"
+                    app:ccp_showNameCode="false"
+                    app:ccp_showPhoneCode="false" />
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -56,13 +63,15 @@
                     android:textStyle="bold" />
 
                 <ImageView
+                    android:id="@+id/country_img"
                     android:layout_width="80dp"
-                    android:layout_height="39dp"
+                    android:layout_height="35dp"
                     android:layout_gravity="center"
                     android:layout_marginStart="8dp"
                     android:src="@drawable/ic_launcher_background" />
 
                 <TextView
+                    android:id="@+id/countryDisplay"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/akshar_medium"
@@ -224,122 +233,59 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:elevation="34dp"
-                android:background="@drawable/bg_rounded_white"
+                android:gravity="center_horizontal"
                 android:padding="16dp"
-                android:layout_margin="16dp">
+                android:layout_margin="30dp"
+                android:background="@drawable/bg_rounded_white"
+                android:elevation="18dp">
 
-                <!-- Title -->
                 <TextView
-                    android:id="@+id/titleCurrency"
+                    android:id="@+id/title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:fontFamily="@font/akshar_medium"
-                    android:text="Currency"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:text="Currency Converter"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="12dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <!-- Labels Row -->
+
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/countryCodePickerfrom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    app:ccp_showNameCode="true"
+                    app:ccp_defaultNameCode="US" />
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/countryCodePickerto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity=""
+                    app:ccp_showNameCode="true"
+                    app:ccp_defaultNameCode="IN" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/currencyAmtEntered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter amount"
+                    android:inputType="numberDecimal"
+                    android:layout_marginTop="16dp" />
+
                 <TextView
-                    android:layout_width="0dp"
+                    android:id="@+id/currencyAmtConverted"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="To"
-                    android:textColor="#000000" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/akshar_medium"
-                        android:gravity="start"
-                        android:text="From"
-                        android:textColor="#000000" />
-
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/akshar_medium"
-                        android:text="To" />
-
-                </LinearLayout>
-
-                <!-- Currency Boxes -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center">
-
-                    <!-- From Box -->
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="50dp"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
-                        android:background="#FFEB00"
-                        android:paddingHorizontal="12dp"
-                        android:layout_marginEnd="8dp">
-
-                        <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="16dp"
-                            android:src="@drawable/ic_baseline_arrow_forward_24"
-                            android:contentDescription="USA Flag" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:fontFamily="@font/akshar_medium"
-                            android:text="$ 56"
-                            android:textColor="#000000"
-                            android:textSize="18sp"
-                            android:textStyle="italic" />
-                    </LinearLayout>
-
-                    <!-- To Box -->
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="50dp"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
-                        android:background="#FFEB00"
-                        android:paddingHorizontal="12dp"
-                        android:layout_marginStart="8dp">
-
-                        <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="16dp"
-                            android:src="@drawable/ic_baseline_arrow_forward_24"
-                            android:contentDescription="USA Flag" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:fontFamily="@font/akshar_medium"
-                            android:text="$ 79"
-                            android:textColor="#000000"
-                            android:textSize="18sp"
-                            android:textStyle="italic" />
-                    </LinearLayout>
-                </LinearLayout>
-
+                    android:text="Converted: $0.00"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="16dp" />
             </LinearLayout>
             <!-- Flight Tracker -->
             <LinearLayout

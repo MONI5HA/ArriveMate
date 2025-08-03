@@ -42,7 +42,7 @@ class SplashScreen : AppCompatActivity() {
             animate().alpha(1f).setDuration(500).start()
         }
         binding.SplashButton.setOnClickListener {
-            startActivity(Intent(this,LoginActivity::class.java));
+            startActivity(Intent(this,MainActivity::class.java));
         }
 
 
