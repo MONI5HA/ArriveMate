@@ -1,5 +1,6 @@
 package com.example.arivemate.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -12,6 +13,7 @@ import androidx.fragment.app.viewModels
 import com.example.arivemate.R
 import com.example.arivemate.databinding.FragmentHomeBinding
 import com.example.arivemate.retrofit.currency.CountryCurrencyMap
+import com.example.arivemate.ui.news.NewsActivity
 import com.example.arivemate.viewmodel.CurrencyViewModel
 import kotlinx.coroutines.*
 
@@ -20,6 +22,7 @@ class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
     private val viewModel: CurrencyViewModel by viewModels()
 
+    private var selectedCountryCode:String="In"
     private var fromCurrency: String = "USD"
     private var toCurrency: String = "INR"
 
@@ -32,10 +35,12 @@ class HomeFragment : Fragment() {
     ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
 
+        //-----------------------------Top Country change -----------------------------------
         binding.countryDisplay.text = binding.countryCodePicker.selectedCountryName
 
         binding.countryCodePicker.setOnCountryChangeListener {
             val selectedCountryName = binding.countryCodePicker.selectedCountryName
+            selectedCountryCode = binding.countryCodePicker.selectedCountryNameCode
             val flagResId = binding.countryCodePicker.selectedCountryFlagResourceId
             val drawable = ContextCompat.getDrawable(requireContext(), flagResId)
 
@@ -43,6 +48,7 @@ class HomeFragment : Fragment() {
             binding.countryImg.setImageDrawable(drawable)
         }
 
+        //--------------------------------Currency Converter --------------------------------------------------------------------------------
         // Initial setup
         fromCurrency = CountryCurrencyMap.countryToCurrency[binding.countryCodePickerfrom.selectedCountryName] ?: "USD"
         toCurrency = CountryCurrencyMap.countryToCurrency[binding.countryCodePickerto.selectedCountryName] ?: "INR"
@@ -84,8 +90,36 @@ class HomeFragment : Fragment() {
             Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
         }
 
+        //-------------------------------News ----------------------------------------------------
+
+        binding.newLayout.setOnClickListener {
+            val intent = Intent(requireContext(),NewsActivity::class.java);
+            intent.putExtra("country_name",selectedCountryCode)
+            startActivity(intent)
+
+        }
+
+        binding.newLayoutText.setOnClickListener {
+            val intent = Intent(requireContext(),NewsActivity::class.java);
+            intent.putExtra("country_name",selectedCountryCode)
+            startActivity(intent)
+        }
+
+        //----------------------------   -------------------------------------
+
+
+
         return binding.root
     }
+
+
+
+
+
+
+
+
+
 
     private fun triggerConversion() {
         debounceJob?.cancel()
