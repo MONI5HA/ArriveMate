@@ -24,7 +24,7 @@ class NewsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_news)
 
-        val api_key =""
+        val api_key ="a"
 
         val country_name = intent.getStringExtra("country_name")?:"ca"
         Toast.makeText(this,country_name,Toast.LENGTH_SHORT).show()
