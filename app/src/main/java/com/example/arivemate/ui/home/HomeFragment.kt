@@ -13,6 +13,7 @@ import androidx.fragment.app.viewModels
 import com.example.arivemate.R
 import com.example.arivemate.databinding.FragmentHomeBinding
 import com.example.arivemate.retrofit.currency.CountryCurrencyMap
+import com.example.arivemate.ui.about.AboutActivity
 import com.example.arivemate.ui.news.NewsActivity
 import com.example.arivemate.viewmodel.CurrencyViewModel
 import kotlinx.coroutines.*
@@ -34,6 +35,8 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
+
+
 
         //-----------------------------Top Country change -----------------------------------
         binding.countryDisplay.text = binding.countryCodePicker.selectedCountryName
@@ -105,7 +108,19 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
-        //----------------------------   -------------------------------------
+        //----------------------------About_Section -------------------------------------
+        binding.aboutSection.setOnClickListener {
+            val intent = Intent(requireContext(), AboutActivity::class.java);
+            intent.putExtra("country_name",selectedCountryCode)
+            startActivity(intent)
+        }
+        binding.abouttext.setOnClickListener {
+            val intent = Intent(requireContext(), AboutActivity::class.java);
+            intent.putExtra("country_name",selectedCountryCode)
+            startActivity(intent)
+        }
+
+
 
 
 

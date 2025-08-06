@@ -14,8 +14,9 @@ android {
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        val apiKey: String = project.findProperty("API_KEY") as? String ?: ""
+        buildConfigField("String", "API_KEY", "\"$apiKey\"")
     }
 
     buildTypes {
@@ -36,6 +37,7 @@ android {
     }
     buildFeatures {
         dataBinding =true
+        buildConfig=true
     }
 }
 

@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<ScrollView  android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA">
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Country Name -->
+        <TextView
+            android:id="@+id/text_country_name"
+            android:layout_width="390dp"
+            android:layout_height="68dp"
+            android:layout_marginBottom="12dp"
+           android:textAllCaps="true"
+            android:textAlignment="center"
+            android:background="@color/app_color"
+            android:text="Canada"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#222222"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <!-- Info Card -->
+        <com.google.android.material.card.MaterialCardView
+              android:id="@+id/card_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:layout_margin="10dp"
+            android:padding="60dp">
+
+            <LinearLayout
+                android:id="@+id/layout_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <!-- Row Template: Label + Value using ConstraintLayout -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:id="@+id/label_official_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Official Name:"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="#555555"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/value_official_name"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:id="@+id/value_official_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Canada"
+                        android:textSize="16sp"
+                        android:textColor="#222222"
+                        app:layout_constraintStart_toEndOf="@id/label_official_name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+                        
+                    </TextView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Repeat for each row below -->
+
+                <!-- Capital -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:id="@+id/label_capital"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Capital:"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="#555555"
+                        android:layout_marginEnd="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/value_capital"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+                    <TextView
+                        android:id="@+id/value_capital"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Ottawa"
+                        android:textSize="16sp"
+                        android:textColor="#222222"
+                        app:layout_constraintStart_toEndOf="@id/label_capital"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Continent -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:id="@+id/label_continent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Continent:"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="#555555"
+                        android:layout_marginEnd="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/value_continent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+                    <TextView
+                        android:id="@+id/value_continent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="North America"
+                        android:textSize="16sp"
+                        android:textColor="#222222"
+                        app:layout_constraintStart_toEndOf="@id/label_continent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Region -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:id="@+id/label_region"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Region:"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="#555555"
+                        android:layout_marginEnd="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/value_region"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+                    <TextView
+                        android:id="@+id/value_region"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Americas"
+                        android:textSize="16sp"
+                        android:textColor="#222222"
+                        app:layout_constraintStart_toEndOf="@id/label_region"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Subregion -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:id="@+id/label_subregion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Subregion:"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="#555555"
+                        android:layout_marginEnd="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/value_subregion"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+                    <TextView
+                        android:id="@+id/value_subregion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="North America"
+                        android:textSize="16sp"
+                        android:textColor="#222222"
+                        app:layout_constraintStart_toEndOf="@id/label_subregion"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Languages -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:id="@+id/label_languages"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Languages:"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="#555555"
+                        android:layout_marginEnd="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/value_languages"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+                    <TextView
+                        android:id="@+id/value_languages"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="English, French"
+                        android:textSize="16sp"
+                        android:textColor="#222222"
+                        app:layout_constraintStart_toEndOf="@id/label_languages"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Population -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:id="@+id/label_population"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Population:"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="#555555"
+                        android:layout_marginEnd="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/value_population"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+                    <TextView
+                        android:id="@+id/value_population"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="38,000,000"
+                        android:textSize="16sp"
+                        android:textColor="#222222"
+                        app:layout_constraintStart_toEndOf="@id/label_population"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Currency -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:id="@+id/label_currency"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Currency:"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="#555555"
+                        android:layout_marginEnd="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/value_currency"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+                    <TextView
+                        android:id="@+id/value_currency"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="CAD ($)"
+                        android:textSize="16sp"
+                        android:textColor="#222222"
+                        app:layout_constraintStart_toEndOf="@id/label_currency"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Population -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:id="@+id/label_latlong"
+                        android:layout_width="155dp"
+                        android:layout_height="26dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="Population:"
+                        android:textColor="#555555"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/value_latlong"
+                        
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/value_latlong"
+                        android:layout_width="163dp"
+                        android:layout_height="20dp"
+                        android:text="[20, 77]"
+                        android:textColor="#222222"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        
+                        app:layout_constraintStart_toEndOf="@id/label_latlong"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- Flag Image -->
+        <ImageView
+            android:id="@+id/image_flag"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/flag_canada"
+            android:contentDescription="Flag of Canada"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Flag Description -->
+        <TextView
+            android:id="@+id/text_flag_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The flag of Canada is composed of a red vertical band on the hoist and fly sides and a central white square..."
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Map -->
+        <ImageView
+            android:id="@+id/image_map"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/baseline_add_location_24"
+            android:layout_marginBottom="16dp" />
+
+        <!-- History Section -->
+        <TextView
+            android:id="@+id/text_history_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="History of Canada"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/text_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:overScrollMode="always"
+
+            />
+
+
+    </LinearLayout>
+</ScrollView>
+</layout>

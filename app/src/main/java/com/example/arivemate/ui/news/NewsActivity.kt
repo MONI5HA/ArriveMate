@@ -16,6 +16,8 @@ import com.example.arivemate.R
 import com.example.arivemate.databinding.ActivityNewsBinding
 import com.example.arivemate.retrofit.News.WebView
 import com.example.arivemate.viewmodel.NewsViewModel
+import com.hbb20.BuildConfig
+
 
 class NewsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityNewsBinding
@@ -24,12 +26,12 @@ class NewsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_news)
 
-        val api_key ="a"
+        val apiKey = com.example.arivemate.BuildConfig.API_KEY
 
         val country_name = intent.getStringExtra("country_name")?:"ca"
         Toast.makeText(this,country_name,Toast.LENGTH_SHORT).show()
 
-        viewModel.fetchNews(country_name,api_key)
+        viewModel.fetchNews(country_name,apiKey)
 
         viewModel.article.observe(this) {articles ->
             val adapter = NewsAdapter(articles) {article->

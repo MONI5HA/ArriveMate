@@ -177,11 +177,11 @@
 
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/aboutSection"
                     android:layout_width="130dp"
                     android:layout_height="129dp"
                     android:layout_columnWeight="1"
                     android:layout_margin="8dp"
-
                     android:background="@drawable/bg_card_yellow"
                     android:backgroundTint="#FFEB3B"
                     android:gravity="center"
@@ -194,6 +194,7 @@
                         android:src="@drawable/info_24px" />
 
                     <TextView
+                        android:id="@+id/abouttext"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
