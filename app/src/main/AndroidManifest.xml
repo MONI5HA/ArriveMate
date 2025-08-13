@@ -2,7 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -13,6 +18,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AriveMate">
+        <activity
+            android:name=".ui.student_center.Checklist"
+            android:exported="false" />
+        <activity
+            android:name=".ui.student_center.country"
+            android:exported="false" />
+        <activity
+            android:name=".ui.translate.Translate"
+            android:exported="false" />
+        <activity
+            android:name=".ui.contactInformation.ContactActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.about.AboutActivity"
             android:exported="false" />

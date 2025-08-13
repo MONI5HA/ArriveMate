@@ -1,0 +1,86 @@
+[
+  {
+    "Canada": {
+      "Pre-Departure (Before You Fly)": [
+        "Passport with valid Study Permit approval letter (POE letter)",
+        "Letter of acceptance from your Canadian school",
+        "Proof of tuition payment",
+        "Proof of funds (bank statements, GIC, etc.)",
+        "Accommodation details (lease, homestay, etc.)",
+        "Travel insurance (if applicable)",
+        "COVID-19 vaccination proof or health requirements (if still needed)",
+        "Copies of transcripts, diplomas, and reference letters",
+        "Carry some Canadian dollars (CAD 200–500) for immediate expenses",
+        "Have an international debit/credit card",
+        "Weather-appropriate clothing (Canada can be very cold in fall/winter)",
+        "Power adapter for Canadian outlets (Type A/B, 120V)",
+        "Prescribed medications with doctor’s note"
+      ],
+      "Upon Landing in Canada": [
+        "Present passport, study permit approval letter, and school documents",
+        "Answer officer’s questions honestly (school name, purpose of visit, program duration)",
+        "Receive your Study Permit document at the airport — check it for errors before leaving",
+        "Pre-book airport pickup, rideshare, or public transit options",
+        "Keep local emergency numbers handy"
+      ],
+      "First Week in Canada": [
+        "Move into your booked place or finalize your housing arrangements",
+        "Get a SIM card (Fido, Koodo, Freedom Mobile, Rogers, Bell, Telus)",
+        "Apply for SIN (Social Insurance Number) — free, apply online or at Service Canada office",
+        "Open a Canadian bank account (Scotiabank, RBC, TD, CIBC, BMO)",
+        "Get a transit card (Presto Card, Compass Card, etc.)",
+        "Apply for public health insurance if eligible or activate school’s plan (UHIP, Guard.me, etc.)"
+      ],
+      "First Month in Canada": [
+        "Attend school orientation",
+        "Understand work rules (20 hrs/week during school, full-time on breaks)",
+        "Set up an emergency contact list",
+        "Explore community resources (libraries, student associations, newcomer centers)",
+        "Budget your expenses (rent, groceries, phone, transport, entertainment)"
+      ]
+    }
+  },
+
+  {
+    "USA": {
+      "Pre-Departure (Before You Fly)": [
+        "Passport with valid Study Permit approval letter (POE letter)",
+        "Letter of acceptance from your Canadian school",
+        "Proof of tuition payment",
+        "Proof of funds (bank statements, GIC, etc.)",
+        "Accommodation details (lease, homestay, etc.)",
+        "Travel insurance (if applicable)",
+        "COVID-19 vaccination proof or health requirements (if still needed)",
+        "Copies of transcripts, diplomas, and reference letters",
+        "Carry some Canadian dollars (CAD 200–500) for immediate expenses",
+        "Have an international debit/credit card",
+        "Weather-appropriate clothing (Canada can be very cold in fall/winter)",
+        "Power adapter for Canadian outlets (Type A/B, 120V)",
+        "Prescribed medications with doctor’s note"
+      ],
+      "Upon Landing in Canada": [
+        "Present passport, study permit approval letter, and school documents",
+        "Answer officer’s questions honestly (school name, purpose of visit, program duration)",
+        "Receive your Study Permit document at the airport — check it for errors before leaving",
+        "Pre-book airport pickup, rideshare, or public transit options",
+        "Keep local emergency numbers handy"
+      ],
+      "First Week in Canada": [
+        "Move into your booked place or finalize your housing arrangements",
+        "Get a SIM card (Fido, Koodo, Freedom Mobile, Rogers, Bell, Telus)",
+        "Apply for SIN (Social Insurance Number) — free, apply online or at Service Canada office",
+        "Open a Canadian bank account (Scotiabank, RBC, TD, CIBC, BMO)",
+        "Get a transit card (Presto Card, Compass Card, etc.)",
+        "Apply for public health insurance if eligible or activate school’s plan (UHIP, Guard.me, etc.)"
+      ],
+      "First Month in Canada": [
+        "Attend school orientation",
+        "Understand work rules (20 hrs/week during school, full-time on breaks)",
+        "Set up an emergency contact list",
+        "Explore community resources (libraries, student associations, newcomer centers)",
+        "Budget your expenses (rent, groceries, phone, transport, entertainment)"
+      ]
+    }
+  }
+
+]

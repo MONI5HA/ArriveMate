@@ -14,7 +14,10 @@ import com.example.arivemate.R
 import com.example.arivemate.databinding.FragmentHomeBinding
 import com.example.arivemate.retrofit.currency.CountryCurrencyMap
 import com.example.arivemate.ui.about.AboutActivity
+import com.example.arivemate.ui.contactInformation.ContactActivity
 import com.example.arivemate.ui.news.NewsActivity
+import com.example.arivemate.ui.student_center.country
+import com.example.arivemate.ui.translate.Translate
 import com.example.arivemate.viewmodel.CurrencyViewModel
 import kotlinx.coroutines.*
 
@@ -23,7 +26,9 @@ class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
     private val viewModel: CurrencyViewModel by viewModels()
 
-    private var selectedCountryCode:String="In"
+    private var selectedCountryCode:String="Ca"
+
+    private var selectedCountryName: String="Canada"
     private var fromCurrency: String = "USD"
     private var toCurrency: String = "INR"
 
@@ -42,7 +47,7 @@ class HomeFragment : Fragment() {
         binding.countryDisplay.text = binding.countryCodePicker.selectedCountryName
 
         binding.countryCodePicker.setOnCountryChangeListener {
-            val selectedCountryName = binding.countryCodePicker.selectedCountryName
+            selectedCountryName = binding.countryCodePicker.selectedCountryName
             selectedCountryCode = binding.countryCodePicker.selectedCountryNameCode
             val flagResId = binding.countryCodePicker.selectedCountryFlagResourceId
             val drawable = ContextCompat.getDrawable(requireContext(), flagResId)
@@ -109,17 +114,46 @@ class HomeFragment : Fragment() {
         }
 
         //----------------------------About_Section -------------------------------------
-        binding.aboutSection.setOnClickListener {
+        binding.contactSection.setOnClickListener {
             val intent = Intent(requireContext(), AboutActivity::class.java);
-            intent.putExtra("country_name",selectedCountryCode)
+            intent.putExtra("country_name",selectedCountryName)
             startActivity(intent)
         }
         binding.abouttext.setOnClickListener {
             val intent = Intent(requireContext(), AboutActivity::class.java);
-            intent.putExtra("country_name",selectedCountryCode)
+            intent.putExtra("country_name",selectedCountryName)
             startActivity(intent)
         }
 
+
+        //----------------------------Contact_Section -------------------------------------
+        binding.aboutSection.setOnClickListener {
+            val intent = Intent(requireContext(), ContactActivity::class.java);
+            intent.putExtra("country_name",selectedCountryName)
+            startActivity(intent)
+        }
+        binding.ContactInformation.setOnClickListener {
+            val intent = Intent(requireContext(), ContactActivity::class.java);
+            intent.putExtra("country_name",selectedCountryName)
+            startActivity(intent)
+        }
+        //----------------------------Translate_Section -------------------------------------
+        binding.translateSection.setOnClickListener {
+                    val intent = Intent(requireContext(), Translate::class.java);
+                    intent.putExtra("country_name",selectedCountryName)
+                    startActivity(intent)
+        }
+        binding.transtaleText.setOnClickListener {
+            val intent = Intent(requireContext(), Translate::class.java);
+            intent.putExtra("country_name",selectedCountryName)
+            startActivity(intent)
+        }
+
+        //-------------------------- Student Center ---------------------------------------
+        binding.studentCenter.setOnClickListener {
+            val intent = Intent(requireContext(), country::class.java)
+            startActivity(intent);
+        }
 
 
 

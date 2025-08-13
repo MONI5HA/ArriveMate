@@ -26,7 +26,7 @@ class NewsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_news)
 
-        val apiKey = com.example.arivemate.BuildConfig.API_KEY
+        val apiKey = "pub_ebec6769d8964c28b796873ad1495974"
 
         val country_name = intent.getStringExtra("country_name")?:"ca"
         Toast.makeText(this,country_name,Toast.LENGTH_SHORT).show()
